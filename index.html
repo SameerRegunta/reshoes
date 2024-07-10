@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shoes</title>
+	<style>
+		body{	
+			background-color: white;
+		}
+		.con{
+			border: solid 1px grey; 
+			height: 60px;
+			margin: 15px;
+			display: flex;
+		}
+		.side{
+			align-content: center;
+		}
+		.side img{
+			width: 60px;
+			height: 50px;
+			margin: 0px 15px;
+		}
+		.oside{
+			align-content: center;
+		}
+		.tside{
+			align-content: center;
+			margin-left: 51%;
+		}
+		a{
+			text-decoration : none;
+			color: grey;
+			margin-left: 25px;
+			font-size: 19px;
+		}
+		sup{
+			font-size: 12px;
+		}
+		#foot{
+			height: 320px;
+			background-color: grey;
+		}
+		.social{
+  			text-align: center;
+  			display: flex;
+  			justify-content: center;
+		}
+		.icon img{
+			width: 50px;
+			height: 50px;
+		}
+		.copy{
+			display: flex;
+			justify-content: center;
+			color: white;
+			font-size: 16px;
+			font-family: "Arial",Sans-serif	;
+			margin-left: 55px;
+		}
+		.short ul{
+			margin: 30px;
+		}
+		.short li{
+			list-style-type: none;
+			margin-top: 7px;
+		}
+		.short a{
+			text-decoration: none;
+			color: white;
+			display: flex;
+  			justify-content: center;
+		}
+		h1{
+			text-align: center;
+			font-size: 40px;
+			color: grey;  
+		}
+		.about{
+			height: 500px;
+			margin: 50px;
+			text-align: center;
+		}
+		.about p{
+			color: grey;
+			font-size: 25px;
+		}
+		.contact{
+			height: 580px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.contact img{
+			width: 500px;
+			height: 500px;
+			margin: 0 120px;
+		}
+		.contact p{
+			margin: 0;
+			padding: 0;
+			color: grey;
+			margin-top: 10px;
+			font-size: 20px;
+		}
+		.contact input{
+			height: 30px;
+			width: 450px;
+			font-size: 16px;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid grey;
+		}
+		.contact form{
+			margin: 80px;
+		}
+		.contact .btn{
+			margin-top: 20px;
+		}
+		.contact button{
+			width: 200px;
+			height: 50px;
+			font-size: 18px;
+			background-color: grey;
+			color: white;
+			border: none;
+			border-radius: 6px;
+		}
+		.cont{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.slide{
+			width: 400px;
+			height: 200px;
+			margin: 20px;
+			background-color: grey;
+			border: solid 1px grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.in{
+			width: 400px;
+			height: 140px;
+			background-color: white;
+			border: solid 1px grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.in a{
+			margin: 0;
+			padding: 0;
+			text-decoration : none;
+			color: grey;
+			font-size: 40px;
+		}
+		.show{
+			box-sizing:border-box;
+		}
+		.slideshow-container{
+  			width: 900px;
+			height: 600px;
+			align-content: center;
+  			position: relative;
+  			margin: auto;
+		}
+		.mySlides{
+			display: none;
+		}
+		.prev, .next {
+  			cursor: pointer;
+ 			position: absolute;
+  			top: 50%;
+  			width: auto;
+  			margin-top: -22px;
+  			padding: 16px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 18px;
+  			transition: 0.6s ease;
+  			border-radius: 0 3px 3px 0;
+  			user-select: none;
+		}
+		.next {
+  			right: 0;
+  			border-radius: 3px 0 0 3px;
+		}
+		.prev:hover, .next:hover {
+  			background-color: rgba(0,0,0,0.8);
+		}
+		.active{
+		  	background-color: #717171;
+		}
+		.fade {
+  			animation-name: fade;
+  			animation-duration: 1.5s;
+		}	
+		@keyframes fade {
+  			from {opacity: .4}
+  			to {opacity: 1}
+		}
+		.dark-mode {
+            background-color: black;
+            color: white;
+        }
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+        .navbar {
+  			overflow: hidden;
+		}
+		.navbar {
+		  	overflow: hidden;
+		}
+		.navbar .a {
+  			float: left;
+  			font-size: 16px;
+  			color: grey;
+  			text-align: center;
+  			padding: 14px 12px;
+  			text-decoration: none;
+		}
+		.dropdown {
+  			float: left;
+  			overflow: hidden;
+		}
+		.dropdown .dropbtn {
+  			font-size: 19px;  
+  			border: none;
+  			outline: none;
+  			color: grey;
+  			background-color: inherit;
+  			font-family: inherit;
+  			margin: 0;
+		}
+		.dropbtn {
+  			background-color: grey;
+  			color: white;
+		}
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: white;
+  			min-width: 160px;
+  			z-index: 1;
+		}
+		.dropdown-content .a {
+  			float: none;
+  			color: grey;
+  			padding: 12px 10px;
+  			text-decoration: none;
+  			display: block;
+  			text-align: left;
+  			cursor: pointer;
+		}
+		.dropdown:hover .dropdown-content {
+  			display: block;
+		}
+	</style>
+
+	
+</head>
+<body>
+	<div class="nav">
+		<div class="con">
+			<div class="side">
+				<a href="index.html"><img src="img/logo.png" alt="Shoes-logo"></a>
+			</div>
+			<div class="oside">
+				<a href="men.html">Men</a>
+				<a href="women.html">Women</a>
+				<a href="kids.html">Kids</a>
+				<a href="trend.html">Trendy<sup>NEW</sup></a>
+			</div>
+			<div class="tside navbar">
+				<a href="bag.html">Bag</a>
+				<a href="login.html">Login/Sign Up</a>
+				<div class="dropdown">
+    				<button class="dropbtn">Mode</button>
+    				<div class="dropdown-content">
+    					<a class="a" onclick="darkMode()">Darkmode</a>
+    					<a class="a" onclick="lightMode()">LightMode</a>
+    				</div>
+  				</div> 
+			</div>
+		</div>
+	</div>
+
+	<div class="show">
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+	    	<img src="img/slide1.jpg" style="width:100%">
+		</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide2.jpg" style="width:100%">
+    	</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide3.jpg" style="width:100%">
+    	</div>
+    	
+    	<div class="mySlides fade">
+    		<img src="img/slide4.jpg" style="width:100%">
+    	</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide5.jpg" style="width:100%">
+    	</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide6.jpg" style="width:100%">
+    	</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide7.jpg" style="width:100%">
+    	</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide8.jpg" style="width:100%">
+    	</div>
+
+    	<div class="mySlides fade">
+    		<img src="img/slide9.jpg" style="width:100%">
+    	</div>
+		    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	</div>
+
+		<hr>
+		<h1>Collections</h1>
+		<hr>
+		<div class="cont">
+		<div class="slide">
+			<div class="in">
+				<a href="men.html">Men's Collection</a>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="in">
+				<a href="women.html">Women's Collection</a>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="in">
+				<a href="kids.html">Kids Collection</a>
+			</div>
+		</div>
+	</div>
+
+	<hr id="about">
+	<h1>About</h1>
+	<hr>
+
+	<div class="about">
+		<p>
+			At our shoe brand, quality is the cornerstone of our production philosophy. We meticulously select premium materials that not only ensure durability but also provide unparalleled comfort. Our shoes are crafted by skilled artisans who pay attention to the minutest details, from stitching to finishing touches. This dedication to quality ensures that each pair of shoes not only stands the test of time but also delivers exceptional performance and aesthetic appeal. Our rigorous quality control processes further guarantee that every shoe leaving our facility meets the highest standards, ensuring customer satisfaction and trust in our brand.
+		</p>
+		<p>
+			In terms of pricing, we strive to strike a perfect balance between affordability and value. Our pricing strategy is designed to offer our customers excellent value for their money without compromising on the quality of the products. By optimizing our production processes and leveraging economies of scale, we are able to keep our costs low and pass these savings on to our customers. Our transparent pricing model ensures that customers understand the value they are receiving, making our shoes an attractive option for a wide range of consumers. We believe that quality footwear should be accessible to everyone, and our competitive pricing reflects this commitment.
+		</p>
+		<p>
+			Moreover, we offer a variety of price points to cater to different market segments, from budget-friendly options to high-end luxury collections. This tiered pricing approach allows us to meet the diverse needs and preferences of our customer base. Regardless of the price point, each pair of our shoes is crafted with the same level of care and attention to detail. Our customers can trust that whether they are purchasing an everyday pair or a premium model, they are investing in footwear that embodies our unwavering dedication to quality and excellence.
+		</p>
+	</div>
+
+	<hr id="contact">
+	<h1>Contact Us</h1>
+	<hr>
+
+	<div class="contact">
+		<div>
+			<img src="img/logo.png">
+		</div>
+		<form action="index.html">
+			<div class="field">
+				<p>Name</p>
+				<input type="text" name="name" required>
+			</div>
+			<div class="field">
+				<p>E-mail</p>
+				<input type="text" name="email" required>
+			</div>
+			<div class="field">
+				<p>Phone Number</p>
+				<input type="text" name="phone" required>
+			</div>
+			<div class="field">
+				<p>Purpose of Contact / Query</p>
+				<input type="text" name="query" required>
+			</div>
+			<br>
+			<button type="submit" class="btn">Submit</button>
+		</form>
+	</div>
+
+	<div id="foot">
+		<br>
+		<div class="social">
+			<div class="icon">
+				<a href="https://www.facebook.com/"><img src="img/facebook.png"></a>
+			</div>
+			<div class="icon">
+				<a href="https://www.instagram.com/"><img src="img/instagram.png"></a>
+			</div>
+			<div class="icon">
+				<a href="https://twitter.com/home"><img src="img/twitter.png"></a>
+			</div>
+			<div class="icon">
+				<a href="https://www.youtube.com/"><img src="img/youtube.webp"></a>
+			</div>
+		</div>
+
+		<div class="short">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="login.html">Login/Sign Up</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>	
+		</div>
+
+		<div class="copy">
+			<p>Copyright &copy;2024 Designed by Sameer Regunta.</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		   let i;
+		   let slides = document.getElementsByClassName("mySlides");
+	    	for (i = 0; i < slides.length; i++) {
+   				slides[i].style.display = "none";
+  			}
+    		slideIndex++;
+    		if (slideIndex > slides.length) {slideIndex = 1}
+    			slides[slideIndex-1].style.display = "block";
+    			setTimeout(showSlides, 2000);
+		}
+		function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+        }
+	</script>
+
+</body>
+</html>
